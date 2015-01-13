@@ -67,8 +67,6 @@ public class RotationLock extends CordovaPlugin {
     public boolean execute (String action, JSONArray args,
                             CallbackContext callback) throws JSONException {
 
-        command = callback;
-
         if (!action.equalsIgnoreCase("setOrientation")) {
             return false;
         }
