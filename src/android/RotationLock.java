@@ -102,7 +102,8 @@ public class RotationLock extends CordovaPlugin {
         } else if (orientation.equals(FULL_SENSOR)) {
             activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR);
         }
-
+		
+		callback.success(orientation);
         return true;
     }
 }
