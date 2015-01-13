@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="de.limexcomputer.cordova.plugin.rotationlock"
+        version="1.0.0">
+
+    <name>AndroidRotationLock</name>
+
+    <description>
+        Enables the app to lock a specific orientation.
+    </description>
+
+    <repo>
+
+    </repo>
+
+    <keywords>
+        rotation, lock, android
+    </keywords>
+
+    <license>Apache 2.0</license>
+
+    <author>Sebastian Fischer</author>
+
+    <!-- cordova -->
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <!-- interface -->
+    <js-module src="www/rotationLock.js" name="rotationLock">
+        <clobbers target="window.RotationLock" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="RotationLock">
+                <param name="android-package" value="de.limexcomputer.cordova.plugin.rotationlock.RotationLock"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/RotationLock.java" target-dir="src/de/limex/cordova/plugin/rotationlock" />
+    </platform>
+</plugin>
