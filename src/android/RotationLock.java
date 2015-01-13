@@ -16,7 +16,7 @@
     under the License.
  */
 
-package de.limexcomputer.cordova.plugin.androidrotationlock;
+package de.limexcomputer.cordova.plugin.rotationlock;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
